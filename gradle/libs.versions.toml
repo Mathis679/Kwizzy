@@ -1,0 +1,64 @@
+[versions]
+hilt = "2.49"
+hiltCompose = "1.2.0"
+androidCore = "1.12.0"
+androidLifecycle = "2.7.0"
+compose = "2024.03.00"
+composeTooling = "1.6.4"
+composeActivity = "1.8.2"
+junit = "4.13.2"
+androidJunit = "1.1.5"
+espresso = "3.5.1"
+composeLifecycle = "2.7.0"
+mockk = "1.13.5"
+assertj = "3.15.0"
+robolectric = "4.9"
+coroutineTest = "1.7.3"
+turbine = "0.12.1"
+androidGradlePlugin = "8.1.4"
+kotlin = "1.8.10"
+hiltPlugin = "2.44"
+
+[libraries]
+hilt-android = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt" }
+hilt-compiler = { group = "com.google.dagger", name = "hilt-android-compiler", version.ref = "hilt" }
+hilt-compose = { group = "androidx.hilt", name = "hilt-navigation-compose", version.ref = "hiltCompose" }
+
+android-tools-build-gradle-plugin = { group = "com.android.tools.build", name = "gradle", version.ref = "androidGradlePlugin" }
+kotlin-gradle-plugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
+android-core = { group = "androidx.core", name = "core-ktx", version.ref = "androidCore" }
+android-lifecycle = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "androidLifecycle" }
+
+compose-activity = { group = "androidx.activity", name = "activity-compose", version.ref = "composeActivity" }
+compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "compose" }
+compose-ui-base = { group = "androidx.compose.ui", name = "ui" }
+compose-ui-graphics = { group = "androidx.compose.ui", name = "ui-graphics-android" }
+compose-material = { group = "androidx.compose.material3", name = "material3" }
+compose-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling-preview-android", version.ref = "composeTooling" }
+compose-viewmodel = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-compose", version.ref = "composeLifecycle" }
+compose-runtime = { group = "androidx.lifecycle", name = "lifecycle-runtime-compose", version.ref = "composeLifecycle" }
+
+test-junit-base = { group = "junit", name = "junit", version.ref = "junit" }
+test-junit-compose = { group = "androidx.compose.ui", name = "ui-test-junit4" }
+test-android-junit = { group = "androidx.test.ext", name = "junit", version.ref = "androidJunit" }
+test-espresso = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espresso" }
+test-mockk-base = { group = "io.mockk", name = "mockk", version.ref = "mockk" }
+test-mockk-android = { group = "io.mockk", name = "mockk-android", version.ref = "mockk" }
+test-assertj = { group = "org.assertj", name = "assertj-core", version.ref = "assertj" }
+test-robolectric = { group = "org.robolectric", name = "robolectric", version.ref = "robolectric" }
+test-coroutine = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-test", version.ref = "coroutineTest" }
+test-turbine = { group = "app.cash.turbine", name = "turbine", version.ref = "turbine" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "androidGradlePlugin" }
+android-library = { id = "com.android.library", version.ref = "androidGradlePlugin" }
+android-kotlin = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlin" }
+hilt = { id = "com.google.dagger.hilt.android", version.ref = "hiltPlugin" }
+org-jetbrains-kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+sample-android-application = { id = "sample.android.application", version = "unspecified" }
+sample-android-library = { id = "sample.android.library", version = "unspecified" }
+
+[bundles]
+compose-bom = ["compose-ui-base", "compose-ui-graphics", "compose-ui-tooling", "compose-material"]
+

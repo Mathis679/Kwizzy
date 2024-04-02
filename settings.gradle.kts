@@ -1,8 +1,9 @@
 pluginManagement {
+    includeBuild("build-logic")
     repositories {
+        gradlePluginPortal()
         google()
         mavenCentral()
-        gradlePluginPortal()
     }
 }
 dependencyResolutionManagement {
@@ -15,3 +16,7 @@ dependencyResolutionManagement {
 
 rootProject.name = "Kwizzy"
 include(":app")
+include(":core")
+include(":data")
+include(":domain")
+include(":ui")
